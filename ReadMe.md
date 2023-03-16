@@ -46,9 +46,9 @@ A tool for editing SpawnProfile within the editor, does not work at runtime.
 
 **No documentation. Just try it out.**
 
-![](IMG\Snipaste_2023-03-17_04-39-16.png)
+![Scrshot](IMG/Snipaste_2023-03-17_04-39-16.png)
 
-![](IMG\Snipaste_2023-03-17_04-40-26.png)
+![Scrshot](IMG/Snipaste_2023-03-17_04-40-26.png)
 
 ## AFPEnemySpawnerActor
 
