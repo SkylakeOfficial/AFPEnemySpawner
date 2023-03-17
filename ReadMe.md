@@ -112,6 +112,10 @@ Returns the fight name text.
 
 Returns an array of current existing enemies.
 
+**GetRemainingTime:**
+
+Returns the remaining time of the battle in seconds. Return -1 if the spawn mode != LoopInTime.
+
 
 
 ## About
