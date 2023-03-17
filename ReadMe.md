@@ -46,7 +46,7 @@ The time it takes for this wave of enemies to spawn from start to complete in se
 
 **EnemyTransform:**
 
-Transform of the enemy spawned in a subwave， will be affected by . Notice that Scale would not be applied. Instead, Scale will define the bounding box size for randomizing enemy location when the enemy count is greater than 1. Spawned enemies will be snapped to floor.
+Transform of the enemy spawned in a subwave， will be affected by the spawner transform. Notice that Scale would not be applied. Instead, Scale will define the bounding box size for randomizing enemy location when the enemy count is greater than 1. Spawned enemies will be snapped to floor.
 
 **EnemyType:**
 
