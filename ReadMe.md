@@ -1,3 +1,4 @@
+[阅读中文文档](ReadMeCN.md)
 # AFPEnemySpawner
 
 An Enemy Spawner Written For *Arknights FP*.
