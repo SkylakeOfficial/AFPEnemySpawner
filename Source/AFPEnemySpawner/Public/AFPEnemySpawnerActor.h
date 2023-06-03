@@ -20,7 +20,7 @@ struct FSpawnConfig_Converted
 {
 	TSubclassOf<APawn> EnemyType;
 	FTransform EnemyTransform = FTransform();
-	UBehaviorTree* EnemyBT;
+	//UBehaviorTree* EnemyBT;
 };
 
 
@@ -65,6 +65,9 @@ protected:
 	virtual void OnConstruction(const FTransform& Transform) override;
 
 	TArray<FSpawnConfig_Converted> ConvertSpawnConfigs(TArray<FEnemySubStreak> InConfig);
+	FVector2D SobolVec2D(uint32 i);
+	float Sobol(uint32 d, uint32 i);
+
 
 	void Spawn_AutoStart();
 	UFUNCTION()

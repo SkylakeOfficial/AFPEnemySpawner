@@ -27,7 +27,8 @@ public class AFPEnemySpawner : ModuleRules
 			{
 				"Core",
                 "AIModule",
-				"Engine"
+				"Engine",
+                "NavigationSystem"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
