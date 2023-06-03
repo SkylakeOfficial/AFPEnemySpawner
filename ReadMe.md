@@ -53,9 +53,9 @@ Transform of the enemy spawned in a subwave， will be affected by the spawner t
 
 Subclass of APawn, Enemy class to spawn.
 
-**EnemyBT:**
+~~EnemyBT:~~
 
-Behavior tree for enemy to run after spawned. Optional.
+~~Behavior tree for enemy to run after spawned. Optional.~~(deprecated)
 
 **EnemyCount:**
 
