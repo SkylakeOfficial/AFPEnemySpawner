@@ -31,6 +31,7 @@ AAFPEnemySpawnerEditor::AAFPEnemySpawnerEditor()
 
 void AAFPEnemySpawnerEditor::EditNext()
 {
+#if WITH_EDITOR
 	if (StoredProfile->Streaks.Num() <= EditingStreakIndex)
 	{
 		StoredProfile->Streaks.Emplace(EditingStreak);
@@ -52,10 +53,12 @@ void AAFPEnemySpawnerEditor::EditNext()
 	}
 
 	RerunConstructionScripts();
+#endif
 }
 
 void AAFPEnemySpawnerEditor::EditPrevious()
 {
+#if WITH_EDITOR
 	if (StoredProfile->Streaks.Num() <= EditingStreakIndex)
 	{
 		StoredProfile->Streaks.Emplace(EditingStreak);
@@ -77,10 +80,12 @@ void AAFPEnemySpawnerEditor::EditPrevious()
 	}
 
 	RerunConstructionScripts();
+#endif
 }
 
 void AAFPEnemySpawnerEditor::Apply()
 {
+#if WITH_EDITOR
 	if (!StoredProfile)
 	{
 		return;
@@ -101,10 +106,12 @@ void AAFPEnemySpawnerEditor::Apply()
 		}
 	}
 	RerunConstructionScripts();
+#endif
 }
 
 void AAFPEnemySpawnerEditor::ToggleDisplayAll()
 {
+#if WITH_EDITOR
 	if (bDisplayAll)
 	{
 		bDisplayAll = false;
@@ -114,6 +121,7 @@ void AAFPEnemySpawnerEditor::ToggleDisplayAll()
 		bDisplayAll = true;
 	}
 	RerunConstructionScripts();
+#endif
 }
 
 void AAFPEnemySpawnerEditor::OnConstruction(const FTransform& Transform)
