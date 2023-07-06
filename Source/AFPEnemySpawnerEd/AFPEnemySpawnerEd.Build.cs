@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class AFPEnemySpawner : ModuleRules
+public class AFPEnemySpawnerEd : ModuleRules
 {
-	public AFPEnemySpawner(ReadOnlyTargetRules Target) : base(Target)
+	public AFPEnemySpawnerEd(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
@@ -15,8 +15,10 @@ public class AFPEnemySpawner : ModuleRules
                 "CoreUObject",
 				"Engine",
 				"Slate",
-				"SlateCore"
+				"SlateCore",
+				"AFPEnemySpawner",
+                "PlacementMode"
 			}
-			);
+			);	
 	}
 }

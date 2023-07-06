@@ -20,6 +20,12 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"WhitelistPlatforms": ["Win64"]
+		},
+		{
+			"Name": "AFPEnemySpawnerEd",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"WhitelistPlatforms": ["Win64"]
 		}
 	]
 }

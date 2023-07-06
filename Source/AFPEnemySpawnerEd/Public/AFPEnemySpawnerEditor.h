@@ -10,7 +10,7 @@
 #include "AFPEnemySpawnerEditor.generated.h"
 
 UCLASS()
-class AFPENEMYSPAWNER_API AAFPEnemySpawnerEditor : public AActor
+class AFPENEMYSPAWNERED_API AAFPEnemySpawnerEditor : public AActor
 {
 	GENERATED_BODY()
 	

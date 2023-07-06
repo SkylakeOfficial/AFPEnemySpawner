@@ -2,7 +2,6 @@
 #pragma once
 
 #include "Engine/DataAsset.h"
-#include "BehaviorTree/BehaviorTree.h"
 #include "GameFramework/Pawn.h"
 #include "AFPEnemySpawnProfile.generated.h"
 
@@ -16,8 +15,8 @@ struct FEnemySubStreak
 		FTransform EnemyTransform = FTransform();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AFPSpawn")
 		TSubclassOf<APawn> EnemyType = APawn::StaticClass();
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AFPSpawn")
-		UBehaviorTree* EnemyBT;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AFPSpawn")
+	//UBehaviorTree* EnemyBT;将不使用外置BT，BT相关逻辑由敌人Pawn内部实现
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AFPSpawn")
 		int32 EnemyCount = 1;
 };

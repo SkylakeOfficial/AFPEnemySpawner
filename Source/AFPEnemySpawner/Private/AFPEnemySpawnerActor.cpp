@@ -4,12 +4,12 @@
 #include "AFPEnemySpawnerActor.h"
 #include "GameFramework/Pawn.h"
 #include "Engine/World.h"
+#include "Engine.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "UObject/ConstructorHelpers.h"
 #include "TimerManager.h"
-#include "AIController.h"
-#include "NavigationSystem.h"
+
 
 
 DEFINE_LOG_CATEGORY(AFPEnemySpawner);
@@ -284,7 +284,7 @@ void AAFPEnemySpawnerActor::Spawn(FSpawnConfig_Converted SpawnConfig)
 	SpawnedPawn->GetActorBounds(true, SpawnLoc, ActorBounds, false);
 	FVector DestLocation = Result.Location.operator+(FVector(0, 0, ActorBounds.Z));
 	//尝试将生成位置吸附到最近导航点
-	UWorld* World = GEngine->GetWorldFromContextObject(this, EGetWorldErrorMode::LogAndReturnNull);
+	/*UWorld* World = GEngine->GetWorldFromContextObject(this, EGetWorldErrorMode::LogAndReturnNull);
 	FVector OutNavLocation;
 	if (UNavigationSystemV1* NavSys = FNavigationSystem::GetCurrent<UNavigationSystemV1>(World))
 	{
@@ -293,7 +293,7 @@ void AAFPEnemySpawnerActor::Spawn(FSpawnConfig_Converted SpawnConfig)
 		{
 			DestLocation = OutNavLocation;
 		}
-	}
+	}*/
 
 	SpawnedPawn->SetActorLocation(DestLocation,true, nullptr, ETeleportType::TeleportPhysics);
 	//绑定到actor摧毁的委托
